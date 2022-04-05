@@ -9,7 +9,7 @@ function randomstringcode(n) {
     for (var i = 0; i < n; i++) {
         tlen++;
         len++;
-        var char = Math.floor((Math.random() * (25)) + 65);
+        var char = Math.floor((Math.random() * (26)) + 65);
         mystring=String.fromCharCode(char)+mystring;
     }
 }
