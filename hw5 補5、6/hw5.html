@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .station {
+            border: solid rgb(3, 91, 167);
+            margin-left: 60px;
+            width: 130px;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .time {
+            border-right: solid rgb(3, 91, 167);
+            margin-left: 65px;
+            line-height: 30px;
+            text-align: center;
+            width: 50px;
+        }
+    </style>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>桃園機捷運行時間</h1>
+    <div class="myselect">
+        <select id="start">
+            <option>起點站</option>
+        </select>
+        <select id="end">
+            <option>終點站</option>
+        </select>
+        <button id="btn">查詢</button>
+        <p id="price"></p>
+    </div>
+    <script src="hw5.js"></script>
+</body>
+
+</html>
