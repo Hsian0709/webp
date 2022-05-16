@@ -1,0 +1,21 @@
+.App {
+  border: Solid rgb(29, 114, 189);
+  position: relative;
+  text-align: center;
+  margin: auto;
+  width: 400px;
+  height: 200px;
+  margin-top: 3%;
+}
+
+.ip {
+  margin-bottom: 5%;
+}
+
+.btn{
+  position: absolute;
+  margin-left: 80%;
+  border: solid rgb(29, 114, 189);
+  background-color: white ;
+}
+
