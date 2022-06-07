@@ -1,0 +1,17 @@
+.completed {
+    list-Style: none;
+    flex: 0.9;
+    margin-left: 3px;
+    margin-Top: -3px;
+    margin-Bottom: 10px;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.uncompleted {
+    list-Style: none;
+    flex: 0.9;
+    margin-left: 3px;
+    margin-Top: -3px;
+    margin-Bottom: 10px;
+}
