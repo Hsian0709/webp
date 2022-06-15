@@ -9,9 +9,9 @@ $(document).ready(function () {
     for (var k = 0; k < 6; k++) {
         mystring[k] = "";
     }
-    t1 = setInterval(picture_in, 1000);
+    t1 = setInterval(picture_in, 666);
     t2 = setInterval(make_animate, 1);
-    setInterval(stopanimate(),1);
+    setInterval(stopanimate(), 1);
 });
 $(document).keydown(function (e) {
     for (var i = 0; i < 6; i++) {
@@ -23,27 +23,19 @@ $(document).keydown(function (e) {
     }
 });
 function picture_in() {
-    for (var j = 0; j < 6; j++) {
-        var t=randomtimes();
-        if (t>1){
-            $("#r" + j).prepend('<img class="prow' + j + ' "src ="image/' + randomstringcode(j) + '.jpg" style="left:65px;" />');
-            $("#r" + j).prepend('<img class="prow' + j + ' "src ="image/' + randomstringcode(j) + '.jpg" />');
-        }
-        else
-            $("#r" + j).prepend('<img class="prow' + j + ' "src ="image/' + randomstringcode(j) + '.jpg" />');
-    }
+    var num = '012345';
+    var x = num[Math.round(Math.random() * 5)];
+    $("#r" + x).prepend('<img class="prow' + x + ' "src ="image/' + randomstringcode(x) + '.jpg" />');
+
 }
 function make_animate() {
-    $(".prow0").animate({ left: "+=19" }, 130);
-    $(".prow1").animate({ left: "+=10" }, 100);
-    $(".prow2").animate({ left: "+=25" }, 100);
-    $(".prow3").animate({ left: "+=15" }, 125);
-    $(".prow4").animate({ left: "+=20" }, 100);
-    $(".prow5").animate({ left: "+=12" }, 100);
-    setInterval(stopanimate(),1);
+    for (var i = 0; i < 6; i++) {
+        $(".prow" + i).animate({ left: "1650PX" }, 10000 + 1000 * i);
+    }
+    setInterval(stopanimate(), 1);
 }
 function stopanimate() {
-    if ($(".prow0").last().offset().left > 1465||$(".prow1").last().offset().left > 1465||$(".prow2").last().offset().left > 1465||$(".prow3").last().offset().left > 1465||$(".prow4").last().offset().left > 1465||$(".prow5").last().offset().left > 1465) {
+    if ($(".prow0").last().offset().left > 1465 || $(".prow1").last().offset().left > 1465 || $(".prow2").last().offset().left > 1465 || $(".prow3").last().offset().left > 1465 || $(".prow4").last().offset().left > 1465 || $(".prow5").last().offset().left > 1465) {
         $("img").stop(true);
         clearInterval(t1);
         clearInterval(t2);
@@ -55,9 +47,4 @@ function randomstringcode(i) {
     var char = Math.floor((Math.random() * (26)) + 65);
     mystring[i] = String.fromCharCode(char) + mystring[i];
     return String.fromCharCode(char);
-}
-function randomtimes() {
-    var nowtime = new Date();
-    var number = Math.floor(Math.random() * (2) + 1);
-    return number;
 }
